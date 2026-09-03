@@ -99,12 +99,3 @@ confirmado, e digo isso claramente em todo lugar onde ela é usada.
 Cada etapa do código só depende da anterior — quem lê `analise.py` não
 precisa entender como `qualidade.py` funciona por dentro, só o que ele
 entrega.
-
-## Duas coisas para revisar antes de enviar
-
-1. As referências bibliográficas em `docs/02_decisoes_metodologicas.md` —
-   não tenho como confirmar edição e paginação sem acesso a busca, então
-   valeria conferir antes de citar formalmente.
-2. A tabela de domínio real de `modalidade` e `criterioJulgamento` na API —
-   se você conseguir abrir os parâmetros do endpoint no Swagger, isso resolve
-   a única hipótese ainda em aberto no trabalho.
