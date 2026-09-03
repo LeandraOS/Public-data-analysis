@@ -1,0 +1,36 @@
+coluna,tipo_logico,preenchidos,completude_%,na_literal,vazio,distintos,cardinalidade_%,valor_modal,freq_modal_%
+idCompra,id,2706,100.0,0,0,1578,58.31,16015805000062021,0.26
+idItemCompra,id,2706,100.0,0,0,2706,100.0,344063,0.04
+forma,categoria,2706,100.0,0,0,2,0.07,SISRP,88.69
+modalidade,categoria,2706,100.0,0,0,2,0.07,5,96.56
+criterioJulgamento,categoria,2632,97.27,0,74,3,0.11,V,96.19
+numeroItemCompra,inteiro,2706,100.0,0,0,204,7.54,1,19.92
+descricaoItem,texto,2706,100.0,0,0,3,0.11,"ÁCIDO ACETILSALICÍLICO, DOSAGEM: 100 MG",34.33
+codigoItemCatalogo,id,2706,100.0,0,0,3,0.11,267502,34.33
+nomeUnidadeMedida,texto,0,0.0,2706,0,0,0.0,,
+siglaUnidadeMedida,categoria,17,0.63,2689,0,2,0.07,G,0.52
+nomeUnidadeFornecimento,categoria,2649,97.89,57,0,6,0.22,COMPRIMIDO,95.79
+siglaUnidadeFornecimento,categoria,2649,97.89,57,0,6,0.22,COMPR,95.79
+capacidadeUnidadeFornecimento,numero_br,2706,100.0,0,0,6,0.22,"0,00",99.37
+quantidade,numero_br,2706,100.0,0,0,919,33.96,"1.000,00",3.1
+precoUnitario,numero_br,2706,100.0,0,0,144,5.32,"0,04",24.35
+percentualMaiorDesconto,numero_br,2706,100.0,0,0,11,0.41,"0,00",99.63
+niFornecedor,id,2706,100.0,0,0,526,19.44,08778201000126,4.25
+nomeFornecedor,texto,2706,100.0,0,0,560,20.69,DROGAFONTE LTDA,4.25
+marca,texto,2698,99.7,1,0,483,17.85,HIPOLABOR,5.62
+codigoUasg,id,2706,100.0,0,0,614,22.69,980921,0.78
+nomeUasg,texto,2706,100.0,0,0,613,22.65,PREFEITURA MUNICIPAL DE SÃO LUÍS - MA,0.78
+codigoMunicipio,numero_br,2697,99.67,0,0,557,20.58,"3.304.557,00",5.25
+municipio,texto,2697,99.67,9,0,374,13.82,RIO DE JANEIRO,5.99
+estado,categoria,2706,100.0,0,0,27,1.0,RJ,11.71
+codigoOrgao,id,2706,100.0,0,0,375,13.86,26443,11.57
+nomeOrgao,texto,2706,100.0,0,0,375,13.86,EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALA,11.57
+poder,categoria,2701,99.82,5,0,2,0.07,E,99.37
+esfera,categoria,2649,97.89,57,0,3,0.11,M,50.63
+dataCompra,data,2706,100.0,0,0,720,26.61,2025-05-22T03:00:00Z,0.67
+dataHoraAtualizacaoCompra,data,2706,100.0,0,0,805,29.75,2022-12-18T18:42:28Z,1.37
+dataHoraAtualizacaoItem,data,2706,100.0,0,0,1044,38.58,2022-12-18T18:43:00Z,1.37
+dataResultado,data,2706,100.0,0,0,717,26.5,2025-05-22T03:00:00Z,0.67
+dataHoraAtualizacaoUasg,data,2706,100.0,0,0,258,9.53,2024-04-06T15:14:00Z,7.32
+codigoClasse,id,2706,100.0,0,0,1,0.04,6505,100.0
+nomeClasse,texto,2706,100.0,0,0,1,0.04,DROGAS E MEDICAMENTOS,100.0

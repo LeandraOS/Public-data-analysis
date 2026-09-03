@@ -1,0 +1,28 @@
+id,dimensao,descricao,severidade,violacoes,taxa_%,acao
+COMP-01,Completude,nomeUnidadeFornecimento ausente ('NA') — impede saber a que se refere o preço,alta,57,2.106,"Registro mantido, mas excluído do escopo de comparação de preços."
+COMP-02,Completude,esfera ausente ('NA') — impede recorte por nível de governo,media,57,2.106,Mantido como categoria 'Não informado'; não imputado.
+COMP-03,Completude,municipio ausente ('NA') — impede recorte territorial fino,media,9,0.333,Mantido; UF permanece utilizável.
+COMP-04,Completude,criterioJulgamento sem conteúdo (célula contém apenas espaço),informativa,74,2.735,Ausência estruturalmente associada à modalidade 6 (ver CONS-04).
+COMP-05,Completude,coluna integralmente vazia (nomeUnidadeMedida),informativa,2706,100.0,Coluna descartada na base tratada: nenhuma informação.
+UNIC-01,Unicidade,linha inteiramente duplicada,bloqueante,0,0.0,Nenhuma ocorrência; nada a fazer.
+UNIC-02,Unicidade,"chave de negócio (idCompra, numeroItemCompra) repetida com idItemCompra distinto",alta,6,0.222,Mantido apenas o registro de dataHoraAtualizacaoItem mais recente (SCD tipo 1).
+UNIC-03,Unicidade,idItemCompra repetido (chave técnica deveria ser única),bloqueante,0,0.0,Nenhuma ocorrência: idItemCompra é chave primária válida.
+VALD-01,Validade,precoUnitario não conversível ou não positivo,bloqueante,0,0.0,Nenhuma ocorrência.
+VALD-02,Validade,"quantidade não conversível, não positiva ou fracionária",bloqueante,0,0.0,Nenhuma ocorrência.
+VALD-03,Validade,CNPJ do fornecedor sem 14 dígitos ou com dígito verificador inválido,alta,0,0.0,Sinalizado; CNPJ inválido impede vínculo confiável com bases externas.
+VALD-04,Validade,codigoMunicipio fora do padrão IBGE de 7 dígitos,media,9,0.333,Sinalizado; corresponde exatamente às linhas com municipio ausente.
+VALD-05,Validade,valor fora do domínio conhecido em campo categórico,alta,0,0.0,Nenhuma ocorrência; domínios estáveis no período.
+VALD-06,Validade,"marca com conteúdo não identificador (genérico, unidade, resíduo de HTML)",alta,314,11.604,Marca não usada como dimensão analítica; apenas descrita.
+VALD-07,Validade,valor com espaço em branco de preenchimento (padding) — quebra comparação exata,alta,102,3.769,"Todas as colunas de texto sofrem strip na tipagem, antes de qualquer comparação."
+CONS-01,Consistência,mesmo CNPJ associado a mais de uma razão social,alta,424,15.669,"Fornecedor identificado por CNPJ, não por nome; nome canônico = mais recente."
+CONS-02,Consistência,mesma razão social associada a mais de um CNPJ,informativa,306,11.308,Esperado (matriz/filiais); tratado por raiz de CNPJ quando pertinente.
+CONS-03,Consistência,UF divergente do prefixo do código IBGE do município,alta,0,0.0,Nenhuma divergência: integridade territorial confirmada.
+CONS-04,Consistência,combinação modalidade x criterioJulgamento fora do padrão observado,informativa,0,0.0,Dependência funcional perfeita; base da decodificação dos domínios.
+CONS-05,Consistência,"criterioJulgamento='D' sem desconto, ou desconto>0 sem criterio='D'",informativa,0,0.0,Coerência perfeita; confirma 'D' = maior desconto.
+CONS-06,Consistência,dataResultado anterior à dataCompra,media,16,0.591,"Sinalizado; datas não usadas como sequência causal, apenas como referência temporal."
+CONS-07,Consistência,atualização do item anterior à data da compra (violação de ordem lógica),media,3,0.111,Sinalizado; indica retificação retroativa ou carga histórica.
+CONS-08,Consistência,forma farmacêutica da unidade de fornecimento incompatível com a descrição CATMAT,alta,27,0.998,Excluído do escopo de comparação de preços por não comparabilidade.
+ACUR-01,Acurácia,"preço unitário implausível: |escore-z modificado| > 3,5 em log(preço), por item",alta,178,6.578,Excluído das estatísticas de preço; analisado separadamente como erro de registro.
+ACUR-02,Acurácia,padrão 'valor do lote no campo de preço unitário': quantidade=1 e preço >> mediana do item,alta,13,0.48,Excluído; erro de preenchimento identificável por assinatura conjunta.
+ACUR-03,Acurácia,capacidadeUnidadeFornecimento = 0 (valor impossível para uma capacidade),informativa,2689,99.372,Interpretado como 'não informado' e não como zero; coluna não usada nas análises.
+ATUAL-01,Atualidade,defasagem entre a compra e sua última atualização superior a 365 dias,informativa,1845,68.182,Documentado: registros antigos continuam sendo retificados na fonte.

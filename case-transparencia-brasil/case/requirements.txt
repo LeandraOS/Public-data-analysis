@@ -1,0 +1,35 @@
+# Dependências do case — Cientista de Dados / Transparência Brasil
+# Python >= 3.11
+#
+# Pisos de versão, escolhidos para portabilidade: qualquer ambiente que os
+# satisfaça deve reproduzir os resultados, porque nenhuma análise depende de
+# aleatoriedade ou de comportamento específico de versão.
+#
+# O ambiente exato em que o relatório foi gerado está em requirements-lock.txt
+# e é impresso no rodapé do próprio relatório HTML.
+
+# --- núcleo: manipulação e cálculo ---
+pandas>=2.1
+numpy>=1.26
+pyarrow>=14.0          # persistência em Parquet (preserva tipos)
+
+# --- estatística ---
+scipy>=1.11            # Mann-Whitney, Spearman, MAD
+statsmodels>=0.14      # regressão log-log com erros-padrão agrupados
+
+# --- visualização ---
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- utilitários ---
+Unidecode>=1.3         # normalização de razões sociais (remoção de diacríticos)
+
+# --- notebook e geração do relatório ---
+jupyter>=1.0
+jupyterlab>=4.0
+ipykernel>=6.25
+nbformat>=5.9
+nbconvert>=7.10        # exportação automática para HTML
+
+# --- testes ---
+pytest>=7.4
